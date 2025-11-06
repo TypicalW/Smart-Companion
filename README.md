@@ -1,13 +1,82 @@
-# Smart-Companion
-An AI-powered smart companion integrating Speech-to-Text, Text-to-Speech, and a custom-trained model to perform basic interactive tasks. Designed for seamless human-like communication and everyday assistance.
+Main file is test.py
 
-## Motivation
-We are a group of four college students building this as our mini-project, but our vision goes far beyond just fulfilling academic requirements. This project is a chance for us to explore cutting-edge technologies like Speech-to-Text, Text-to-Speech, and AI model integration skills that are highly relevant in today’s tech landscape.
+# 🎙️ AI Voice Assistant - Zira
 
-What drives us is the desire to create something useful in real life, not just a proof-of-concept. We want our AI-powered smart companion to feel natural, intuitive, and genuinely helpful for everyday tasks. This project is as much about learning and experimenting as it is about delivering something functional, polished, and scalable.
+An intelligent voice assistant built in Python that listens, speaks, and performs tasks like opening websites, setting alarms, and chatting through AI (OpenRouter/OpenAI API).
 
-## License
-This project is multi-licensed under:
-- [MIT License](Licenses/LICENSE-MIT)
-- [Apache License 2.0](Licenses/LICENSE-Apache-2.0.txt)
-- [GNU GPL v3](Licenses/LICENSE-GPLv3.txt)
+---
+
+## 🚀 Features
+- Voice input using `speech_recognition`
+- Natural voice replies using `gTTS` + `pygame`
+- Integration with OpenRouter / OpenAI API (GPT-4o-mini)
+- Opens YouTube, Google, and Wikipedia
+- Sets alarms and gives time-based reminders
+- Offline fallback speech via `pyttsx3`
+
+---
+
+## 🧠 Tech Stack
+- **Python 3.12+**
+- **Libraries**: `SpeechRecognition`, `gTTS`, `pygame`, `pyttsx3`, `openai`, `python-dotenv`
+- **AI Model**: `gpt-4o-mini` via OpenRouter
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR_USERNAME/ai-voice-assistant.git
+cd ai-voice-assistant
+
+2️⃣ Create Virtual Environment
+python -m venv ai1
+.\ai1\Scripts\Activate.ps1
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Add Environment Variables
+
+Create a file named .env in the project root:
+
+BASE_URL=https://openrouter.ai/api/v1
+OPENROUTER_API_KEY=your_openrouter_key_here
+MODEL=gpt-4o-mini
+
+5️⃣ Run the Assistant
+python test.py
+
+🗣️ Example Commands
+
+“Open YouTube”
+
+“Set alarm for 07:30”
+
+“Tell me about World War 1”
+
+“Who is Virat Kohli”
+
+“Stop”
+
+👩‍💻 Author
+
+Aanandi
+GitHub: @aanandi2004
+
+🧾 License
+
+This project is open-source under the MIT License
+.
+
+
+---
+
+### **2️⃣ Add and Commit Everything**
+
+Run these commands in PowerShell:
+
+```powershell
+git add .
+git commit -m "Initial commit: AI Voice Assistant Zira"

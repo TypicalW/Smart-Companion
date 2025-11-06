@@ -1,0 +1,14 @@
+# Virtual environment
+ai1/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# Audio files
+*.mp3
+*.wav
