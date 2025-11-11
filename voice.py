@@ -199,18 +199,19 @@ def main():
             else:
                 speak("I couldn’t understand the time you said.")
 
-        else:
-            # 1) Append user message to context (so the model sees it as part of dialogue)
-            append_to_context("user", command)
+       else:
+    # 1) Append user message to context
+    append_to_context("user", command)
 
-            # 2) Get reply from model (context-aware)
-            reply = chat_with_zira(command)
+    # 2) Get reply from model (context-aware)
+    reply = chat_with_zira(command)
 
-            # 3) Append assistant reply to context
-            append_to_context("assistant", reply)
+    # 3) Only store valid replies (ignore API error fallback)
+    if not reply.lower().startswith("sorry, i’m having trouble"):
+        append_to_context("assistant", reply)
 
-            # 4) Speak the reply
-            speak(reply)
+    # 4) Speak the reply regardless (so user hears error if it happened)
+    speak(reply)
 
 # ---------------------------
 # Run
